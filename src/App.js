@@ -12,7 +12,7 @@ import {
 import Spinner from './components/Spinner/';
 import logo from './assets/logo.png';
 
-const API_URL = 'https://cfopen-api.herokuapp.com/api/v1/open/leaderboards?name=Bahia&division='
+const API_URL = 'https://cfopen-api.herokuapp.com/api/v1/open/cfba?gender='
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchAPI('Masculino');
+    this.fetchAPI('M');
   }
 
   fetchAPI(division) {
@@ -57,7 +57,7 @@ class App extends Component {
     const attr = target.getAttribute('dataref');
 
     this.setState({ category: attr, athletes: [] });
-    const fetchCategory = attr === 'isMen' ? 'Masculino' : 'Feminino';
+    const fetchCategory = attr === 'isMen' ? 'M' : 'F';
     this.fetchAPI(fetchCategory);
   }
 
@@ -89,12 +89,11 @@ class App extends Component {
       elem = (
         <tr>
           <th scope="col">Atletas</th>
-          <th scope="col">18.1</th>
-          <th scope="col">18.2</th>
-          <th scope="col">18.2a</th>
-          <th scope="col">18.3</th>
-          <th scope="col">18.4</th>
-          <th scope="col">18.5</th>
+          <th scope="col">19.1</th>
+          <th scope="col">19.2</th>
+          <th scope="col">19.3</th>
+          <th scope="col">19.4</th>
+          <th scope="col">19.5</th>
         </tr>
       );
     } else {
@@ -103,12 +102,11 @@ class App extends Component {
           <th scope="col">#</th>
           <th scope="col">Atletas</th>
           <th scope="col">Pontos</th>
-          <th scope="col">18.1</th>
-          <th scope="col">18.2</th>
-          <th scope="col">18.2a</th>
-          <th scope="col">18.3</th>
-          <th scope="col">18.4</th>
-          <th scope="col">18.5</th>
+          <th scope="col">19.1</th>
+          <th scope="col">19.2</th>
+          <th scope="col">19.3</th>
+          <th scope="col">19.4</th>
+          <th scope="col">19.5</th>
         </tr>
       );
     }
@@ -133,7 +131,7 @@ class App extends Component {
 
   getScoreAsList(scores) {
     return scores.map((score, index) => {
-      const wods = [`18.1:`, `18.2:`, `18.2a:`, `18.3:`, `18.4:`, `18.5:`];
+      const wods = [`19.1:`, `19.2:`, `19.3:`, `19.4:`, `19.5:`];
 
       let elem = ( score.rank ?
         <li key={wods[index]}>
@@ -225,19 +223,17 @@ class App extends Component {
     return (
       <div className="App">
         <Helmet
-          defaultTitle="2018 Open Crossfit Leaderboard - Bahia"
+          defaultTitle="2019 Open Crossfit Leaderboard - CFBA"
           meta={[
             { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-            { name: 'description', content: '2018 Open Crossfit Leaderboard Bahia' },
+            { name: 'description', content: '2019 Open Crossfit Leaderboard CFBA' },
           ]}
           link={[ boostrap ]}
         />
 
         <div className="container">
           <div className="py-5 text-center">
-            <img className="d-block mx-auto mb-4" src={logo} alt="Open Crossfit Bahia" />
-            <h2>2018 Open Crossfit Leaderboard - Bahia</h2>
-            <p className="lead">Acompanhe o leaderboard dos atletas baianos</p>
+            <img className="d-block mx-auto mb-4" src={logo} alt="Open Crossfit CFBA" />
 
             <div className="row justify-content-md-center">
               <div className="col-md-auto col-lg-4">
@@ -265,7 +261,7 @@ class App extends Component {
                     type="text"
                     name="searchText"
                     onChange={this.filterLeaderboard}
-                    placeholder="Pesquise por atleta ou box"
+                    placeholder="Pesquise pelo nome do atleta"
                   />
                 </div>
 
@@ -289,20 +285,8 @@ class App extends Component {
           </div>
 
           <footer className="my-5 pt-5 text-muted text-center text-small">
-            <p className="mb-1">&copy; 2018 Open Crossfit Games Leaderboard Bahia</p>
-            <ul className="list-inline">
-              <li className="list-inline-item">
-                <a href="https://github.com/cristianossd" target="_blank" rel="noopener noreferrer">
-                  Cristiano Santos
-                </a>
-              </li>
-
-              <li className="list-inline-item">
-                <a href="https://github.com/joaopcanario" target="_blank" rel="noopener noreferrer">
-                  João Paulo Canário
-                </a>
-              </li>
-            </ul>
+            <p className="mb-1">&copy; 2019 Open Crossfit Games Leaderboard CFBA</p>
+            <p>Desenvolvido por <a href="https://github.com/joaopcanario" target="_blank" rel="noopener noreferrer">João Paulo Canário</a></p>
           </footer>
         </div>
       </div>

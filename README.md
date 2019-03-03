@@ -1,2 +1,2 @@
 # open-crossfit-leaderboard
-Open Crossfit leaderboard for athletes from Bahia
+Open Crossfit leaderboard for athletes from CFBA

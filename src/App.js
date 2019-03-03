@@ -29,8 +29,8 @@ class App extends Component {
     this.fetchAPI('M');
   }
 
-  fetchAPI(division) {
-    fetch(`${API_URL}${division}`)
+  fetchAPI(gender) {
+    fetch(`${API_URL}${gender}`)
       .then(res => res.json())
       .then(data => { this.setState({ athletes: data }) })
       .catch(err => { console.log('Error happened during fetching!', err); });

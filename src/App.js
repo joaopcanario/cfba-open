@@ -233,7 +233,7 @@ class App extends Component {
 
         <div className="container">
           <div className="py-5 text-center">
-            <img className="d-block mx-auto mb-4" src={logo} alt="Open Crossfit CFBA" style="width:90px;height:90px;" />
+            <img className="d-block mx-auto mb-4" src={logo} alt="Open Crossfit CFBA" />
 
             <div className="row justify-content-md-center">
               <div className="col-md-auto col-lg-4">

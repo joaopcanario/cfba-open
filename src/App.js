@@ -89,11 +89,11 @@ class App extends Component {
       elem = (
         <tr>
           <th scope="col">Atletas</th>
-          <th scope="col">19.1</th>
-          <th scope="col">19.2</th>
-          <th scope="col">19.3</th>
-          <th scope="col">19.4</th>
-          <th scope="col">19.5</th>
+          <th scope="col">20.1</th>
+          <th scope="col">20.2</th>
+          <th scope="col">20.3</th>
+          <th scope="col">20.4</th>
+          <th scope="col">20.5</th>
         </tr>
       );
     } else {
@@ -102,11 +102,11 @@ class App extends Component {
           <th scope="col">#</th>
           <th scope="col">Atletas</th>
           <th scope="col">Pontos</th>
-          <th scope="col">19.1</th>
-          <th scope="col">19.2</th>
-          <th scope="col">19.3</th>
-          <th scope="col">19.4</th>
-          <th scope="col">19.5</th>
+          <th scope="col">20.1</th>
+          <th scope="col">20.2</th>
+          <th scope="col">20.3</th>
+          <th scope="col">20.4</th>
+          <th scope="col">20.5</th>
         </tr>
       );
     }
@@ -131,7 +131,7 @@ class App extends Component {
 
   getScoreAsList(scores) {
     return scores.map((score, index) => {
-      const wods = [`19.1:`, `19.2:`, `19.3:`, `19.4:`, `19.5:`];
+      const wods = [`20.1:`, `20.2:`, `20.3:`, `20.4:`, `20.5:`];
 
       let elem = ( score.rank ?
         <li key={wods[index]}>
@@ -223,10 +223,10 @@ class App extends Component {
     return (
       <div className="App">
         <Helmet
-          defaultTitle="2019 Open Crossfit Leaderboard - CFBA"
+          defaultTitle="2020 Open Crossfit Leaderboard - CFBA"
           meta={[
             { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-            { name: 'description', content: '2019 Open Crossfit Leaderboard CFBA' },
+            { name: 'description', content: '2020 Open Crossfit Leaderboard CFBA' },
           ]}
           link={[ boostrap ]}
         />
@@ -285,7 +285,7 @@ class App extends Component {
           </div>
 
           <footer className="my-5 pt-5 text-muted text-center text-small">
-            <p className="mb-1">&copy; 2019 Open Crossfit Games Leaderboard CFBA</p>
+            <p className="mb-1">&copy; 2020 Open Crossfit Games Leaderboard CFBA</p>
             <p>Desenvolvido por <a href="https://github.com/joaopcanario" target="_blank" rel="noopener noreferrer">João Paulo Canário</a></p>
           </footer>
         </div>
